@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qrcode_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <cn.edu.gdaib.zxingdemo.view.ClearEditText
+        android:id="@+id/et_qrcodeText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/qrcode_scanResult"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/qrcode_etText"
+        android:textColorHint="@color/qrcode_etHint"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_et_selector" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@string/qrcode_startScan"
+        android:textColor="@color/qrcode_etText"
+        android:textSize="19sp"
+        android:id="@+id/btn_qrcodeScan"
+        android:layout_below="@+id/et_qrcodeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:background="@drawable/bg_btn_click_selector" />
+    <TextView
+        android:id="@+id/tv_qrcodeLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_qrcodeScan"
+        android:text="当前位置:北京市东城区"
+        android:textSize="14sp"
+        android:textColor="@color/qrcode_tvText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/tv_qrcodeActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_qrcodeLocation"
+        android:text="活动名称:小米新品发布会"
+        android:textSize="14sp"
+        android:textColor="@color/qrcode_tvText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:maxLength="90"/>
+    <TextView
+        android:id="@+id/tv_qrcodeTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_qrcodeActivity"
+        android:text="签到时间:2016-08-06 16:50"
+        android:textSize="14sp"
+        android:textColor="@color/qrcode_tvText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp" />
+    <cn.edu.gdaib.zxingdemo.view.ClearEditText
+        android:id="@+id/et_qrcodeString"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/qrcode_makeText"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/qrcode_etText"
+        android:textColorHint="@color/qrcode_etHint"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_et_selector"
+        android:layout_below="@id/tv_qrcodeTime"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@string/qrcode_makeCode"
+        android:textColor="@color/qrcode_etText"
+        android:textSize="19sp"
+        android:id="@+id/btn_qrcodeMake"
+        android:layout_below="@+id/et_qrcodeString"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:background="@drawable/bg_btn_click_selector" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/iv_qrcodeImage"
+        android:layout_below="@id/btn_qrcodeMake"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

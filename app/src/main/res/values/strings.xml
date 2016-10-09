@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ZXingDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="qrcode_scanResult">请输入活动名称,扫描信息</string>
+    <string name="qrcode_startScan">开始扫描并签到</string>
+    <string name="qrcode_makeText">请输入要生成的字符串,如URL</string>
+    <string name="qrcode_makeCode">生成二维码</string>
+    <string name="qrcode_scanner_text_tip">将二维码放入框内,即可自动扫描</string>
+    <string name="qrcode_save_picture">保存至本地</string>
+    <string name="qrcode_save_picture_failed">保存失败</string>
+    <string name="qrcode_save_picture_success">图片成功保存至%s目录</string>
+    <string name="qrcode_current_pos">当前位置</string>
+    <string name="qrcode_activity_name">活动名称</string>
+    <string name="qrcode_sign_time">签到时间</string>
+
+</resources>
